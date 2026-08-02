@@ -24,7 +24,7 @@
               <a href="{{ .Permalink }}">· {{ .Title | markdownify }}</a>
             </h2>
             {{ with .File }}
-              <a class="post-fileinfo" href="/posts/{{ . }}/" title="{{ .Path }}">[{{ .Path }}]</a>
+              <a class="post-fileinfo" href="{{ $.RelPermalink }}" title="{{ .Path }}">[{{ .Path }}]</a>
             {{ end }}
           </div>
 
