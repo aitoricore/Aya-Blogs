@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="post">
+    <h1 class="post-title">404 — {{ $.Site.Params.missingContentMessage | default "Page not found..." }}</h1>
+    
+    <div class="post-content">
+      <p>一个错误的 url……欸，难道是我忘记做页面了？</p>
+      <p>如果你确信你不应看到这个，请联系我。</p>
+      <a class="home-link" href="{{ "/" | absURL }}">{{ $.Site.Params.missingBackButtonLabel | default "主页" }}&nbsp;→</a>
+    </div>
+
+  </div>
+{{ end }}

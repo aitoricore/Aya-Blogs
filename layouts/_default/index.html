@@ -1,0 +1,98 @@
+{{ define "main" }}
+<div class="home-layout">
+  <div class="home-main">
+  {{ if .Content }}
+    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+      {{ .Content }}
+    </div>
+  {{ end }}
+  <div class="posts">
+    {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+    {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+
+    {{ $PageContext := . }}
+    {{ if .IsHome }}
+      {{ $PageContext = .Site }}
+    {{ end }}
+    {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+
+    {{ range $paginator.Pages }}
+      <article class="post on-list paper-card">
+        <div class="post-heading">
+          <div class="post-title-group">
+            <h2 class="post-title">
+              <a href="{{ .Permalink }}">· {{ .Title | markdownify }}</a>
+            </h2>
+            {{ with .File }}
+              <a class="post-fileinfo" href="{{ $.Permalink }}" title="{{ .Path }}">[{{ .Path }}]</a>
+            {{ end }}
+          </div>
+
+          <div class="post-meta">
+            {{- if .Date -}}
+              <time class="post-date">
+                {{- partial "post-date" . -}}
+              </time>
+            {{- end -}}
+            {{- with .Params.Author -}}
+              <span class="post-author">{{ . }}</span>
+            {{- end -}}
+          </div>
+        </div>
+
+        {{ if .Params.tags }}
+          <span class="post-tags">
+            {{ range .Params.tags }}
+            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+              {{- . -}}
+            </a>&nbsp;
+            {{ end }}
+          </span>
+        {{ end }}
+
+        {{ partial "cover.html" . }}
+
+        <div class="post-content">
+          {{ if .Params.showFullContent }}
+            <blockquote class="post-excerpt">{{ .Content | plainify | truncate 100 }}</blockquote>
+          {{ else if .Description }}
+            <blockquote class="post-excerpt">{{ .Description | plainify | truncate 100 }}</blockquote>
+          {{ else }}
+            <blockquote class="post-excerpt">{{ .Summary | plainify | truncate 100 }}</blockquote>
+          {{ end }}
+        </div>
+
+        {{ if not .Params.showFullContent }}
+          <div class="post-footer">
+            <a class="read-more" href="{{ .RelPermalink }}">{{ $.Site.Params.ReadMore | default "Read more" }}</a>
+          </div>
+        {{ end }}
+      </article>
+    {{ end }}
+    {{ if not .Paginator.HasNext }}
+      <p class="home-endline">-----已经到底啦-----</p>
+    {{ end }}
+    {{ partial "posts_pagination.html" . }}
+  </div>
+  </div>
+
+  <div class="home-side">
+    <aside class="home-info paper-card" aria-label="主页信息">
+      <h2 class="info-card__title">本页信息</h2>
+      <hr>
+      <div class="info-card__content">
+        <p>欢迎访问 Shameimaru_Aya 的 blogs 站。</p>
+        <p>现在这里正在活跃装修，请经常回来看看以发现新的变化。</p>
+      </div>
+    </aside>
+
+    <aside class="home-info paper-card" aria-label="附加信息">
+      <h2 class="info-card__title">联系我！</h2>
+      <hr>
+      <div class="info-card__content">
+        {{.Params.contactInfo}}
+      </div>
+    </aside>
+  </div>
+</div>
+{{ end }}

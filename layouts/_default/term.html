@@ -1,0 +1,61 @@
+{{ define "main" }}
+  <div class="list-main paper-card">
+    <h1 class="post-title">Posts for: #{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="index-content">
+        {{ . }}
+      </div>
+    {{ end }}
+    <div class="posts">
+      {{ range .Paginator.Pages }}
+        <article class="post on-list paper-card">
+          <div class="post-heading">
+            <h2 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h2>
+            <div class="post-meta">
+              {{- if .Date -}}
+                <time class="post-date">
+                  {{- partial "post-date" . -}}
+                </time>
+              {{- end -}}
+              {{- with .Params.Author -}}
+                <span class="post-author">{{- . -}}</span>
+              {{- end -}}
+            </div>
+          </div>
+
+          {{ if .Params.tags }}
+            <span class="post-tags">
+              {{ range .Params.tags }}
+              #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+                {{- . -}}
+              </a>&nbsp;
+              {{ end }}
+            </span>
+          {{ end }}
+
+          {{ partial "cover.html" . }}
+
+          <div class="post-content">
+            {{ if .Params.showFullContent }}
+              <blockquote class="post-excerpt">{{ .Content | plainify | truncate 100 }}</blockquote>
+            {{ else if .Description }}
+              <blockquote class="post-excerpt">{{ .Description | plainify | truncate 100 }}</blockquote>
+            {{ else }}
+              <blockquote class="post-excerpt">{{ .Summary | plainify | truncate 100 }}</blockquote>
+            {{ end }}
+          </div>
+
+          {{ if not .Params.showFullContent }}
+            <div class="post-footer">
+              <a class="read-more" href="{{ .RelPermalink }}">{{ $.Site.Params.ReadMore | default "Read more" }}</a>
+            </div>
+          {{ end }}
+        </article>
+      {{ end }}
+
+      {{ partial "posts_pagination.html" . }}
+    </div>
+  </div>
+{{ end }}

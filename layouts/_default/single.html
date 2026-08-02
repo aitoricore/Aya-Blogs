@@ -1,0 +1,72 @@
+{{ define "main" }}
+<div class="single-layout">
+  <article class="post paper-card">
+    <div class="post-title-row">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      </h1>
+      {{ with .File }}
+        <a class="post-fileinfo" href="{{ $.Permalink }}" title="{{ .Path }}">[{{ .Path }}]</a>
+      {{ end }}
+    </div>
+    <div class="post-meta">
+      {{- if .Date -}}
+        <time class="post-date">
+          {{- partial "post-date" . -}}
+          {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
+            &nbsp;{{- partial "post-lastmod" . -}}
+          {{- end -}}
+        </time>
+      {{- end -}}
+      {{- with .Params.Author -}}
+        <span class="post-author">{{ . }}</span>
+      {{- end -}}
+      {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}
+        <span class="post-reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
+      {{- end -}}
+    </div>
+
+    {{ if .Params.tags }}
+      <span class="post-tags">
+        {{ range .Params.tags }}
+        #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
+        {{ end }}
+      </span>
+    {{ end }}
+    {{ partial "cover.html" . }}
+
+    {{ if (.Params.Toc | default .Site.Params.Toc) }}
+      <div class="table-of-contents">
+        <h2>
+          {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
+        </h2>
+        {{ .TableOfContents }}
+      </div>
+    {{ end }}
+
+    <div class="post-content">
+      {{- with .Content -}}
+        <div>
+          {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
+        </div>
+      {{- end -}}
+    </div>
+
+    {{ if not (.Params.hideComments | default false) }}
+      {{ partial "comments.html" . }}
+    {{ end }}
+  </article>
+
+  <aside class="info-card paper-card" aria-label="本页信息">
+    <h2 class="info-card__title">本页信息</h2>
+    <hr>
+    <div class="info-card__content">
+      {{ with .Params.info }}
+        {{ . | markdownify }}
+      {{ else }}
+        <p>暂无补充信息。</p>
+      {{ end }}
+    </div>
+  </aside>
+</div>
+{{ end }}

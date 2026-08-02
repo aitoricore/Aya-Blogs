@@ -1,0 +1,55 @@
+<style>
+  .site-nav {
+    max-width: 800px;
+    margin: 0 auto 1.4rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--foreground) 18%, transparent);
+    font-family: "SimHei", "Heiti SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 2.5rem;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-nav__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-nav__link {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link:focus-visible {
+    opacity: 0.8;
+    color: var(--accent);
+  }
+
+  .site-nav__link--home {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+</style>
+
+<nav class="site-nav" aria-label="站点导航">
+  <ul class="site-nav__list">
+    <li class="site-nav__item"><a class="site-nav__link site-nav__link--home" href="/">Aya blogs</a></li>
+    <li class="site-nav__item"><a class="site-nav__link" href="/posts">文章</a></li>
+    <li class="site-nav__item"><a class="site-nav__link" href="/tags">标签</a></li>
+    <li class="site-nav__item"><a class="site-nav__link" href="/catagories">集合</a></li>
+    <li class="site-nav__item"><a class="site-nav__link" href="/log">日志</a></li>
+    <li class="site-nav__item"><a class="site-nav__link" href="/friends">友链</a></li>
+  </ul>
+</nav>

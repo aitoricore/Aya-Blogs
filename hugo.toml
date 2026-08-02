@@ -1,0 +1,5 @@
+baseURL = 'https://example.org/'
+locale = 'zh-cn'
+title = 'Aya Blogs'
+subtitle = 'ait 的闲聊'
+theme = "terminal"
