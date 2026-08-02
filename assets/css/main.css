@@ -537,7 +537,11 @@ blockquote.twitter-tweet::before {
 .read-more:hover {
   text-decoration: underline;
 }
-
+.single-border{
+  margin:0rem 1.9rem 0;
+  padding: 0rem 2rem 0;
+  border-left: 4px solid color-mix(in srgb, var(--foreground) 60%, transparent);
+}
 .info-card {
   flex: 0 1 320px;
   max-width: 320px;
@@ -551,7 +555,8 @@ blockquote.twitter-tweet::before {
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0rem;
+  padding-left: 0;
 }
 
 .post-title-group,
@@ -559,14 +564,15 @@ blockquote.twitter-tweet::before {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
+  margin: 0 0rem 0rem;
   flex-wrap: wrap;
   min-width: 0;
 }
 
 .post-fileinfo {
   display: inline-block;
-  margin: 0.2rem 0 0;
-  font-size: 0.78rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.83rem;
   line-height: 1.45;
   color: color-mix(in srgb, var(--muted) 65%, transparent);
   text-decoration: none;
@@ -715,9 +721,9 @@ blockquote.twitter-tweet::before {
 }
 
 .home-info {
-  flex: 0 1 320px;
+  flex: 0 1 150x;
   max-width: 320px;
-  min-height: 200px;
+  min-height: 150px;
   padding: 1.25rem 1.1rem;
 }
 

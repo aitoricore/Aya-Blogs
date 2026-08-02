@@ -61,6 +61,7 @@
 
 .post-tags {
   display: block;
+  padding-left: 0;
   /* margin-bottom: 20px; */
   font-size: inherit;
   color: var(--accent);

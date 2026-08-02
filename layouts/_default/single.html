@@ -1,9 +1,10 @@
 {{ define "main" }}
 <div class="single-layout">
   <article class="post paper-card">
+    <div class="single-border">
     <div class="post-title-row">
       <h1 class="post-title">
-        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        <a href="{{ .Permalink }}">文章内页：{{ .Title | markdownify }}</a>
       </h1>
       {{ with .File }}
         <a class="post-fileinfo" href="{{ $.Permalink }}" title="{{ .Path }}">[{{ .Path }}]</a>
@@ -34,7 +35,7 @@
       </span>
     {{ end }}
     {{ partial "cover.html" . }}
-
+    </div>
     {{ if (.Params.Toc | default .Site.Params.Toc) }}
       <div class="table-of-contents">
         <h2>

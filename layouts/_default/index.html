@@ -24,7 +24,7 @@
               <a href="{{ .Permalink }}">· {{ .Title | markdownify }}</a>
             </h2>
             {{ with .File }}
-              <a class="post-fileinfo" href="{{ $.Permalink }}" title="{{ .Path }}">[{{ .Path }}]</a>
+              <a class="post-fileinfo" href="/posts/{{ . }}/" title="{{ .Path }}">[{{ .Path }}]</a>
             {{ end }}
           </div>
 
@@ -35,7 +35,7 @@
               </time>
             {{- end -}}
             {{- with .Params.Author -}}
-              <span class="post-author">{{ . }}</span>
+              <span class="post-author">作者：{{ . }}</span>
             {{- end -}}
           </div>
         </div>
@@ -54,11 +54,11 @@
 
         <div class="post-content">
           {{ if .Params.showFullContent }}
-            <blockquote class="post-excerpt">{{ .Content | plainify | truncate 100 }}</blockquote>
+            <blockquote class="post-excerpt">{{ .Content | plainify | truncate 150 }}</blockquote>
           {{ else if .Description }}
-            <blockquote class="post-excerpt">{{ .Description | plainify | truncate 100 }}</blockquote>
+            <blockquote class="post-excerpt">{{ .Description | plainify | truncate 150 }}</blockquote>
           {{ else }}
-            <blockquote class="post-excerpt">{{ .Summary | plainify | truncate 100 }}</blockquote>
+            <blockquote class="post-excerpt">{{ .Summary | plainify | truncate 150 }}</blockquote>
           {{ end }}
         </div>
 
@@ -90,7 +90,8 @@
       <h2 class="info-card__title">联系我！</h2>
       <hr>
       <div class="info-card__content">
-        {{.Params.contactInfo}}
+        <p>QQ：3229377505</p>
+        <p>Mail：aitoricore@gmail.com</p>
       </div>
     </aside>
   </div>
