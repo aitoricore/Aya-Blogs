@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = "https://aitoricore.github.io/Aya-Blogs/"
 locale = 'zh-cn'
 title = 'Aya Blogs'
 subtitle = 'ait 的闲聊'
