@@ -1,4 +1,4 @@
-# Aya Blogs
+# [Aya Blogs](https://aitoricore.github.io/Aya-Blogs/)
 
 这是一个基于 Hugo 的个人博客项目，当前使用 Terminal 主题，并对首页、文章列表、分页和部分样式做了简单自定义。
 
