@@ -28,7 +28,7 @@ test
 >
 > - test
 
-![予你回归线](test.jpg)
+![予你回归线](/Aya-Blogs/test.jpg)
 
 ↑予你回归线。
 
