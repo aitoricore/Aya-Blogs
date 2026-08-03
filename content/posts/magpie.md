@@ -1,11 +1,9 @@
 ---
-date : '2026-08-01T21:28:58+08:00'
+date : '2026-06-13T11:58:59+08:00'
 draft : false
 title : '喜鹊'
-Author: 'Shameimaru_Aya'
 tags:
   - '文章'
-  - '装修中'
   - '观鸟日志'
 info: |
   发布在六月。
