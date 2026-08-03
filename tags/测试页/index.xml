@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试页 on Aya Blogs</title><link>https://aitoricore.github.io/Aya-Blogs/tags/%E6%B5%8B%E8%AF%95%E9%A1%B5/</link><description>Recent content in 测试页 on Aya Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 01 Aug 2026 21:28:58 +0800</lastBuildDate><atom:link href="https://aitoricore.github.io/Aya-Blogs/tags/%E6%B5%8B%E8%AF%95%E9%A1%B5/index.xml" rel="self" type="application/rss+xml"/><item><title>测试页</title><link>https://aitoricore.github.io/Aya-Blogs/posts/hello/</link><pubDate>Sat, 01 Aug 2026 21:28:58 +0800</pubDate><guid>https://aitoricore.github.io/Aya-Blogs/posts/hello/</guid><description>&lt;p&gt;test&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试页 on Aya Blogs</title><link>https://aitoricore.github.io/Aya-Blogs/tags/%E6%B5%8B%E8%AF%95%E9%A1%B5/</link><description>Recent content in 测试页 on Aya Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 03 Aug 2026 21:33:24 +0800</lastBuildDate><atom:link href="https://aitoricore.github.io/Aya-Blogs/tags/%E6%B5%8B%E8%AF%95%E9%A1%B5/index.xml" rel="self" type="application/rss+xml"/><item><title>测试页</title><link>https://aitoricore.github.io/Aya-Blogs/posts/hello/</link><pubDate>Sat, 01 Aug 2026 21:28:58 +0800</pubDate><guid>https://aitoricore.github.io/Aya-Blogs/posts/hello/</guid><description>&lt;p&gt;test&lt;/p&gt;
 &lt;h1 id="test"&gt;test&lt;/h1&gt;
 &lt;h2 id="test-1"&gt;test&lt;/h2&gt;
 &lt;h3 id="test-2"&gt;test&lt;/h3&gt;
@@ -16,6 +16,6 @@
 &lt;li&gt;test&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src="test.jpg" alt="予你回归线"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://aitoricore.github.io/Aya-Blogs/test.jpg" alt="予你回归线"&gt;&lt;/p&gt;
 &lt;p&gt;↑予你回归线。&lt;/p&gt;
 &lt;p&gt;Markdown 怎么搞居中啊……这个排版，我觉得很是必要来着。&lt;/p&gt;</description></item></channel></rss>
