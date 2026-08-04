@@ -547,6 +547,7 @@ blockquote.twitter-tweet::before {
   max-width: 320px;
   min-height: 400px;
   padding: 1.5rem 1.3rem;
+  /* display: gird; */
 }
 
 .post-heading {
@@ -629,6 +630,7 @@ blockquote.twitter-tweet::before {
 .info-card__content {
   font-size: 0.95rem;
   color: #3b3428;
+  /* display: grid; */
 }
 
 .info-card__content p {
@@ -746,6 +748,9 @@ blockquote.twitter-tweet::before {
 /* .home-info + .home-info {
   margin-top: 0;
 } */
+.update-info{
+  align-self:end;
+}
 
 @media (max-width: 900px) {
   .home-layout {

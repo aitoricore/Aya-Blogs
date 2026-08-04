@@ -6,6 +6,7 @@
       {{ .Content }}
     </div>
   {{ end }}
+  
   <div class="posts">
     {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
     {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
@@ -88,7 +89,7 @@
         <hr>
         {{ $latest := index (where .Site.RegularPages "Type" "posts") 0 }}
         {{ with $latest.GitInfo }}
-        <div>
+        <div class="update-info">
           Last update: {{ .CommitDate.Format "2006-01-02 15:04:05" }}
           <br>
           Commit: {{ .Subject }}
@@ -105,6 +106,16 @@
         <p>Mail：aitoricore@gmail.com</p>
       </div>
     </aside>
+
+    <aside class="home-info paper-card" aria-label="功能模块">
+      <h2 class="info-card__title">功能模块</h2>
+      <hr>
+      <div class="info-card__content">
+        {{ partial "hitokoto.html" . }}
+      </div>
+    </aside>
+
+
   </div>
 </div>
 {{ end }}

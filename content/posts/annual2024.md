@@ -8,7 +8,7 @@ tags = ["年终总结", "文章"]
 showFullContent = false
 readingTime = false
 hideComments = true
-info = ""
+info = "如果可以的话我真不想放上来，但不这么做年终总结就不成为系列了。\n\n嘛，刚上高中的时候稍微有点唐，原谅我也可以的哦※。"
 +++
 
 >巡る巡る この水平線

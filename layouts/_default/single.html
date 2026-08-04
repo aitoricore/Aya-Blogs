@@ -67,8 +67,9 @@
       {{ else }}
         <p>暂无补充信息。</p>
       {{ end }}
+      <hr>
       {{ with .GitInfo }}
-        <div>
+        <div class="update-info">
           Last update: {{ .CommitDate.Format "2006-01-02 15:04:05" }}
           <br>
           Commit: {{ .Subject }}

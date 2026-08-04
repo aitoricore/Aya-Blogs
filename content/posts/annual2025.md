@@ -4,16 +4,15 @@ date = "2025-12-31T23:52:25+08:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 #author = "Aya"
 #authorTwitter = "ayaya" #do not include @
-cover = "gugu.png"
 tags = ["年终总结", "文章"]
 keywords = ["keyword1", "keyword2"]
 showFullContent = false
 readingTime = false
 hideComments = true
-info = "Markdown 炸了。我在想办法修。\n\n 这能换行吗？"
+info = "Markdown 炸了。我在想办法修。\n\n这能换行吗？"
 +++
 
-往年回顾 [年终总结 茜の鼓動](https://www.luogu.com.cn/article/uahbpaor)
+往年回顾 [年终总结 茜の鼓動](/Aya-Blogs/posts/annual2024)
 
 ##
 
@@ -65,7 +64,7 @@ info = "Markdown 炸了。我在想办法修。\n\n 这能换行吗？"
 
 元旦晚会的时候进行了 puzzle hunt 的一个 presentation，姑且算是没有坠机。唯一的问题是在于主持现场太过需要精力以至于灵魂似乎没有很好地跟上身体。于是就以一个大脑空空打音游的状态度过了剩下的部分。
 
-好在回家路上公交车行使的速度足够慢，以便灵魂重新追上脚步。
+好在回家路上公交车行驶的速度足够慢，以便灵魂重新追上脚步。
 
 今年洛谷动态的量相较去年有显著减少，相比之下 qq 空间动态数量显著增加。想要被观看的虚荣心显著膨胀，显著词汇自身的使用频率亦显著上涨。
 
