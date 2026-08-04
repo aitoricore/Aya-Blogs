@@ -10,7 +10,7 @@
 
 [ ] 友链
 
-# [Aya Blogs](https://aitoricore.github.io/Aya-Blogs/)
+# [Aya Blogs](https://aitoricore.github.io/)
 
 以下内容均使用生成式人工智能生成，喝喝。
 

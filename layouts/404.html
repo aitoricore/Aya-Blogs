@@ -1,4 +1,30 @@
 {{ define "main" }}
+<script>
+(function () {
+
+    const oldPrefix = "/Aya-Blogs";
+
+    const path = window.location.pathname;
+
+    if (path.startsWith(oldPrefix)) {
+
+        let newPath = path.substring(oldPrefix.length);
+
+        if (newPath === "") {
+            newPath = "/";
+        }
+
+        const target =
+            newPath +
+            window.location.search +
+            window.location.hash;
+
+        window.location.replace(target);
+
+    } 
+
+})();
+</script>
   <div class="post">
     <h1 class="post-title">404 — {{ $.Site.Params.missingContentMessage | default "Page not found..." }}</h1>
     
@@ -10,3 +36,4 @@
 
   </div>
 {{ end }}
+

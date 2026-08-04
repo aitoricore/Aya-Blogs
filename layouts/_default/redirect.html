@@ -1,0 +1,48 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+
+    <link rel="canonical" href="{{ "/" | absURL }}">
+</head>
+
+<body>
+
+<p>
+正在跳转……
+</p>
+
+<script>
+(function () {
+
+    // 默认目标
+    const defaultTarget = "{{ "/" | relURL }}";
+
+    // 获取 ?to=
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("to");
+
+    // 防止空参数
+    if (target) {
+        window.location.replace(target);
+    } else {
+        window.location.replace(defaultTarget);
+    }
+
+})();
+</script>
+
+<noscript>
+    <p>
+        请点击：
+        <a href="{{ "/" | relURL }}">
+            跳转
+        </a>
+    </p>
+</noscript>
+
+</body>
+</html>
+{{ end }}
