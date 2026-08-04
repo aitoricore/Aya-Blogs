@@ -45,10 +45,16 @@
   position: relative;
   color: var(--accent);
   margin-top: 0 !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 15px;
   padding-bottom: 0;
   border-bottom: none;
   text-decoration: none !important;
+}
+
+@media (max-width: 684px) {
+  .post-title {
+    margin-bottom: 0 !important;
+  }
 }
 
 .post-title::after {

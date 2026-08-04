@@ -513,6 +513,21 @@ blockquote.twitter-tweet::before {
   padding-bottom: clamp(1rem, 1.8vw, 1.4rem);
 }
 
+/* @media (max-width: 684px) {
+  .post > .post-content {
+    padding-top: 0;
+    padding-bottom: 0rem;
+  }
+  .post > .post-title {
+    padding-top: 0;
+    padding-bottom: 0rem;
+  }
+  .post > .post-tags {
+    padding-top: 0;
+    padding-bottom: 0rem;
+  }
+} */
+
 .post-excerpt {
   margin: 0;
   padding: 0.9rem 1rem;
@@ -886,5 +901,23 @@ iframe[src*="youtube.com"] {
 
   .content {
     display: initial;
+  }
+}
+
+@media (max-width: 684px) {
+  .post-footer,
+  .post-content,
+  .post-tags,
+  .post-title,
+  .post-fileinfo,
+  .post-meta {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0px !important;
+  }
+  .post-excerpt {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 }

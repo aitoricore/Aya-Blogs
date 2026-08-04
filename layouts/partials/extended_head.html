@@ -11,16 +11,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem 2.5rem;
+    gap: 1rem 2.5rem;
     align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
+  @media (max-width: 400px){
+    .site-nav__list{
+      gap: 1rem 1rem;
+    }
+  }
+
   .site-nav__item {
     display: inline-flex;
     align-items: center;
+  }
+
+  .site-nave__item--home{
+    /* align-items: left;
+    justify-content: flex-start; */
   }
 
   .site-nav__link {
@@ -41,13 +52,30 @@
     /* font-weight: 600; */
     text-decoration: underline;
     text-underline-offset: 0.2em;
+    justify-content: flex-start;
     /* text-decoration-line:overline underline; */
+  }
+
+  .site-logo img {
+    width: 60px;
+    margin-right: 8px;
+    border: 0;
+    margin: 0;
+    align-self: middle;
+    padding: 0;
   }
 </style>
 
 <nav class="site-nav" aria-label="站点导航">
   <ul class="site-nav__list">
-    <li class="site-nav__item"><a class="site-nav__link site-nav__link--home" href="{{ .Site.Home.RelPermalink }}">Aya blogs</a></li>
+    <li class="site-nav__item--home">
+      <a class="site-nav__link site-nav__link--home" href="{{ .Site.Home.RelPermalink }}">
+        <div class="site-logo">
+          <img src="{{ "favicon.svg" | relURL  }}" title="Aya Blogs" alt="Aya Blogs">
+        </div>
+        <!-- Aya blogs -->
+      </a>
+    </li>
     <li class="site-nav__item"><a class="site-nav__link" href="{{ (site.GetPage "/posts").RelPermalink }}">文章</a></li>
     <li class="site-nav__item"><a class="site-nav__link" href="{{ (site.GetPage "/tags").RelPermalink }}">标签</a></li>
     <li class="site-nav__item"><a class="site-nav__link" href="{{ (site.GetPage "/categories").RelPermalink }}">集合</a></li>
