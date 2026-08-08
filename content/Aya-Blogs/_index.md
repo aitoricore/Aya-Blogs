@@ -1,4 +1,0 @@
----
-title: "Moved"
-layout: "redirect"
----

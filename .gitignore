@@ -1,5 +1,6 @@
 _layouts/
 public/
 resources/
+_themes/
 .hugo_build.lock
 .DS_Store

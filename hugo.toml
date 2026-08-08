@@ -1,7 +1,5 @@
 baseURL = "https://aitoricore.github.io/"
 locale = 'zh-cn'
 title = 'Aya Blogs - Ait 杂谈闲话'
-theme = "terminal"
 enableGitInfo = true
-framed= 'a!'
-content ='gugugu!'
+ignoreLogs = ['warning-goldmark-raw-html']

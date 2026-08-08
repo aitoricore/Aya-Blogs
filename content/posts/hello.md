@@ -1,35 +1,18 @@
 ---
-date : '2026-08-03T21:28:58+08:00'
+date : '2026-08-05T09:06:23+08:00'
 draft : false
 title : '测试页'
 cover : "test.jpg"
 tags:
   - '测试页'
   - '装修中'
+showFullContent : true
 ---
 
-test
+↑头图：稻叶昙的 [予你回归线](/gugu)。
 
-# test
+欢迎访问 Aya 的博客站……这一页原本是个测试页，但置顶很方便我就拿它来当主页了。
 
-## test
+正如标题所述，目前主要存放闲聊杂谈，以后也可能用来存放学习笔记。祝你读的开心！
 
-### test
-
-#### test
-
->test
-
-- test
-
-1.test
-
-> 1.test
->
-> - test
-
-![予你回归线](/Aya-Blogs/test.jpg)
-
-↑予你回归线。
-
-Markdown 怎么搞居中啊……这个排版，我觉得很是必要来着。
+感到疑惑？访问 [Q&A](/qa) 或者 [联系我](/contact) 直接询问吧。

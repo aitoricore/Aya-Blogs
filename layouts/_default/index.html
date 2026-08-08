@@ -55,7 +55,7 @@
 
         <div class="post-content">
           {{ if .Params.showFullContent }}
-            <blockquote class="post-excerpt">{{ .Content | plainify | truncate 150 }}</blockquote>
+            <blockquote class="post-excerpt">{{ .Content  }}</blockquote>
           {{ else if .Description }}
             <blockquote class="post-excerpt">{{ .Description | plainify | truncate 150 }}</blockquote>
           {{ else }}
